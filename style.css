@@ -1,60 +1,145 @@
-/* Base */
-body {
+:root{
+  /* Notion-like */
+  --max: 720px;
+  --pad: 24px;
+
+  --text: #111;
+  --muted: rgba(55,53,47,.65);
+  --border: rgba(55,53,47,.14);
+  --link: #0b57d0;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
-  color: #222;
-  line-height: 1.6;
-  background: #ffffff;
+  padding: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
 }
 
-/* Conteneur principal */
-.wrap {
-  max-width: 900px;
-  margin: 80px auto 90px;
-  padding: 56px;
-}
+img{ max-width: 100%; height: auto; }
 
-/* Titres */
-h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.2em;
-}
-
-h2 {
-  margin-top: 2.5em;
-  font-size: 1.4rem;
-}
-
-/* Bandeau + icône */
-.hero {
+/* Cover pleine largeur */
+.hero{
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
   position: relative;
 }
 
-.banner {
+.banner{
   width: 100%;
-  height: 260px;
-  object-fit: cover;
+  height: 100%;
   display: block;
+  object-fit: cover;
+  object-position: center;
 }
 
-.logo {
-  position: absolute;
-  bottom: -36px;
-  left: 40px;
-  width: 72px;
-  height: 72px;
-  background: #ffffff;
-  padding: 8px;
-  border-radius: 8px;
+/* Colonne principale */
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--pad) 64px;
 }
 
-.subtitle {
-  font-size: 1.1rem;
-  color: #555;
-  margin-bottom: 2.5rem;
+/* Icône "posée" sur la cover */
+.page-icon{
+  width: 56px;
+  height: 56px;
+  margin-top: -28px;  /* chevauchement */
+  margin-bottom: 10px;
 }
 
-h2 {
-  margin-top: 2.5rem;
+.logo{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+
+  /* neutralise l'effet "carte blanche" */
+  background: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Typo */
+h1{
+  font-size: 48px;
+  line-height: 1.12;
+  margin: 18px 0 6px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.subtitle{
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+h2{
+  font-size: 26px;
+  line-height: 1.2;
+  margin: 34px 0 10px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+p{
+  margin: 0.55rem 0;
+  font-size: 16px;
+}
+
+p + p{
+  margin-top: 0.85rem;
+}
+
+a{
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover{ text-decoration: underline; }
+
+hr{
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 28px 0;
+}
+
+/* Bloc légal (plus d'air + plus discret) */
+.legal{
+  margin-top: 64px;         /* espace AVANT le bloc */
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.legal p{
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  font-family: ui-serif, Georgia, "Times New Roman", serif;
+}
+
+/* Mobile */
+@media (max-width: 600px){
+  :root{ --pad: 18px; }
+  .hero{ height: 240px; }
+  h1{ font-size: 38px; }
+}
+
+/* Optionnel: mode sombre auto, très léger */
+@media (prefers-color-scheme: dark){
+  body{ background:#0f0f10; color:#f2f2f2; }
+  :root{
+    --muted: rgba(255,255,255,.65);
+    --border: rgba(255,255,255,.12);
+    --link: #7ab0ff;
+  }
 }
