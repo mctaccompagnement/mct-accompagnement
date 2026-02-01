@@ -10,14 +10,18 @@
 
 <body>
 
-  <!-- Bandeau + icône (solution 1) -->
-  <header class="hero">
-    <img src="images/bandeau.jpeg" alt="Bandeau MCT" class="banner" />
-    <img src="images/icon.png" alt="Icône MCT" class="logo" />
+  <!-- Cover pleine largeur -->
+  <header class="hero" aria-label="Couverture">
+    <img src="images/bandeau.jpeg" alt="" class="banner" />
   </header>
 
-  <!-- Contenu -->
+  <!-- Contenu en colonne -->
   <main class="wrap">
+    <!-- Icône qui chevauche la cover -->
+    <div class="page-icon" aria-hidden="true">
+      <img src="images/icon.png" alt="" class="logo" />
+    </div>
+
     <h1>MCT – Accompagnement</h1>
     <p class="subtitle">Ingénierie des dynamiques humaines au travail</p>
 
@@ -92,19 +96,20 @@
       vous pouvez me contacter à l’adresse suivante :
       <a href="mailto:mct.accompagnement@gmail.com"><strong>mct.accompagnement@gmail.com</strong></a>
     </p>
-    </p>
-    <p>
 
     <hr />
 
-    <p>
-      <strong>MCT – Accompagnement</strong><br />
-      Entreprise individuelle<br />
-      SIREN : 100 461 011<br />
-      SIRET : 10046101100015<br />
-      Code APE : 70.22Z<br />
-      Nom commercial : MCT – Accompagnement
-    </p>
+    <!-- Bloc légal : plus espacé + police plus discrète (géré par style.css) -->
+    <footer class="legal">
+      <p>
+        <strong>MCT – Accompagnement</strong><br />
+        Entreprise individuelle<br />
+        SIREN : 100 461 011<br />
+        SIRET : 10046101100015<br />
+        Code APE : 70.22Z<br />
+        Nom commercial : MCT – Accompagnement
+      </p>
+    </footer>
   </main>
 
 </body>
