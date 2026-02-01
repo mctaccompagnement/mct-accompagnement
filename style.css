@@ -133,27 +133,29 @@ hr{
   color: var(--muted);
   font-family: ui-serif, Georgia, "Times New Roman", serif;
 }
-
-/* Mentions légales + photo */
+/* Mentions légales + photo : toujours en colonne (comme iPhone) */
 .legal-wrap{
   display: flex;
+  flex-direction: column;  /* ⬅ force photo en dessous */
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 18px;
   margin-top: 48px;
+}
+
+/* La photo reste petite et discrète */
+.portrait{
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 12px;
+  opacity: 0.88;
+  display: block;
 }
 
 /* Photo = signature humaine */
 .signature{
   flex-shrink: 0;
-}
-
-.portrait{
-  width: 80px;          /* discret */
-  height: 100px;        /* légèrement vertical */
-  object-fit: cover;
-  border-radius: 12px;  /* éditorial, pas réseau social */
-  opacity: 0.88;        /* très doux */
+  margin-top: 6px;
 }
 
 
@@ -164,7 +166,6 @@ hr{
   h1.title{ font-size: 38px; }
   .subtitle{ margin-left: 0; }
   .legal-wrap{
-    flex-direction: column;
     gap: 24px;
   }
   .portrait{
