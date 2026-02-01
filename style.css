@@ -138,6 +138,7 @@ hr{
   :root{ --pad: 18px; }
   .hero{ height: 180px; }
   h1.title{ font-size: 38px; }
+  .subtitle{ margin-left: 0; }
 }
 
 /* Optionnel: mode sombre auto, très léger */
