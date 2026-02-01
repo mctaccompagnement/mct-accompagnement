@@ -135,26 +135,26 @@ hr{
 }
 /* Mentions légales + photo : toujours en colonne (comme iPhone) */
 .legal-wrap{
-  display: flex;
-  flex-direction: column;  /* ⬅ force photo en dessous */
+  display: flex !important;
+  flex-direction: column !important;
   align-items: flex-start;
   gap: 18px;
+  width: 100%;
   margin-top: 48px;
 }
-
 /* La photo reste petite et discrète */
 .portrait{
   width: 72px;
-  height: 72px;
+  height: 90px;
   object-fit: cover;
   border-radius: 12px;
   opacity: 0.88;
   display: block;
 }
 
+
 /* Photo = signature humaine */
 .signature{
-  flex-shrink: 0;
   margin-top: 6px;
 }
 
@@ -167,10 +167,6 @@ hr{
   .subtitle{ margin-left: 0; }
   .legal-wrap{
     gap: 24px;
-  }
-  .portrait{
-    width: 72px;
-    height: 90px;
   }
 }
 
