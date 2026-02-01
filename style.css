@@ -25,7 +25,7 @@ img{ max-width: 100%; height: auto; }
 
 /* Cover pleine largeur */
 .hero{
-  height: 300px;
+  height: 220px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -134,7 +134,7 @@ hr{
 /* Mobile */
 @media (max-width: 600px){
   :root{ --pad: 18px; }
-  .hero{ height: 240px; }
+  .hero{ height: 180px; }
   h1.title{ font-size: 38px; }
 }
 
