@@ -134,13 +134,45 @@ hr{
   font-family: ui-serif, Georgia, "Times New Roman", serif;
 }
 
+/* Mentions légales + photo */
+.legal-wrap{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 48px;
+}
+
+/* Photo = signature humaine */
+.signature{
+  flex-shrink: 0;
+}
+
+.portrait{
+  width: 80px;          /* discret */
+  height: 100px;        /* légèrement vertical */
+  object-fit: cover;
+  border-radius: 12px;  /* éditorial, pas réseau social */
+  opacity: 0.88;        /* très doux */
+}
+
+
 /* Mobile */
 @media (max-width: 600px){
   :root{ --pad: 18px; }
   .hero{ height: 180px; }
   h1.title{ font-size: 38px; }
   .subtitle{ margin-left: 0; }
+  .legal-wrap{
+    flex-direction: column;
+    gap: 24px;
+  }
+  .portrait{
+    width: 72px;
+    height: 90px;
+  }
 }
+
 
 /* Optionnel: mode sombre auto, très léger */
 @media (prefers-color-scheme: dark){
