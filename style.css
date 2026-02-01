@@ -37,6 +37,8 @@ img{ max-width: 100%; height: auto; }
   display: block;
   object-fit: cover;
   object-position: center;
+  position: relative;
+  z-index: 1;
 }
 
 /* Colonne principale */
@@ -52,7 +54,9 @@ img{ max-width: 100%; height: auto; }
   height: 56px;
   margin-top: -28px;  /* chevauchement */
   margin-bottom: 10px;
+  z-index: 2;           /* ⬅ passe au premier plan */
 }
+
 
 .logo{
   width: 100%;
