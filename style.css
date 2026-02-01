@@ -48,3 +48,9 @@ h2 {
   padding: 8px;
   border-radius: 8px;
 }
+
+.subtitle {
+  margin: 0 0 44px;
+  font-size: 18px;
+  color: #2b2b2b;
+}
