@@ -75,6 +75,8 @@ h1.title{
   font-weight: 400;
   line-height: 1.5;
   color: rgba(55,53,47,.6);
+  /* Alignement sous le texte du titre */
+  margin-left: calc(40px + 12px);
 }
 
 .title-logo{
