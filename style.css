@@ -48,30 +48,6 @@ img{ max-width: 100%; height: auto; }
   padding: 0 var(--pad) 64px;
 }
 
-/* Icône "posée" sur la cover */
-.page-icon{
-  width: 56px;
-  height: 56px;
-  margin-top: -28px;  /* chevauchement */
-  margin-bottom: 10px;
-  z-index: 2;           /* ⬅ passe au premier plan */
-}
-
-
-.logo{
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;
-
-  /* neutralise l'effet "carte blanche" */
-  background: transparent;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-}
-
 /* Typo */
 /*h1{
   font-size: 48px;
@@ -159,7 +135,7 @@ hr{
 @media (max-width: 600px){
   :root{ --pad: 18px; }
   .hero{ height: 240px; }
-  h1{ font-size: 38px; }
+  h1.title{ font-size: 38px; }
 }
 
 /* Optionnel: mode sombre auto, très léger */
