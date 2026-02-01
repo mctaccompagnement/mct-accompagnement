@@ -121,7 +121,7 @@ hr{
 
 /* Bloc légal (plus d'air + plus discret) */
 .legal{
-  margin-top: 64px;         /* espace AVANT le bloc */
+  margin-top: 32px;         /* espace AVANT le bloc */
   padding-top: 24px;
   border-top: 1px solid var(--border);
 }
@@ -140,7 +140,7 @@ hr{
   align-items: flex-start;
   gap: 18px;
   width: 100%;
-  margin-top: 48px;
+  margin-top: 32px;
 }
 /* La photo reste petite et discrète */
 .portrait{
@@ -163,10 +163,10 @@ hr{
 @media (max-width: 600px){
   :root{ --pad: 18px; }
   .hero{ height: 180px; }
-  h1.title{ font-size: 38px; }
+  h1.title{ font-size: 32px; }
   .subtitle{ margin-left: 0; }
   .legal-wrap{
-    gap: 24px;
+    gap: 18px;
   }
 }
 
