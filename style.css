@@ -178,5 +178,8 @@ hr{
     --muted: rgba(255,255,255,.65);
     --border: rgba(255,255,255,.12);
     --link: #7ab0ff;
+  /* Fix titres + sous-titre */
+  h2{ color: rgba(255,255,255,.90); }
+  .subtitle{ color: rgba(255,255,255,.72); }
   }
 }
